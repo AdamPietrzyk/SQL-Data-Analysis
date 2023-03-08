@@ -1,13 +1,14 @@
 # Blood Donation Project description
 
-#### The "Blood Donation Project" is a project entirely created by me. All the data preseted in this project is fictional.
+### The "Blood Donation Project" is a project entirely created by me. All the data preseted in this project is fictional.
 
 ### The project is a simple database which acts as a mini blood donation system.
-<br />
+
 _________________________________________________________________________
-<br />
-<br />
-The database contains several tables that are linked with relations. These are:
+
+
+#### The database contains several tables that are linked with relations. These are:
+
 - Patients - this table contains data about donors such as names, genders, addresses
 - Donations - this table contains data about all the donations, so it allows to identify which donor donated a specific amount of blood etc.
 - Inventory - this table monitors the sum of blood donated (for each combination of BloodType and RhFactor separetely)
