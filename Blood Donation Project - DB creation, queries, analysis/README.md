@@ -14,3 +14,5 @@ The database contains several tables that are linked with relations. These are:
 - DonorLevel - this table contains data about possible donors level based on a donated amount
 
 Moreover the code that I prepared contains some TRIGGERS, so some ations are taken automaticcaly, such as changing DonorLevel. Trigger automatically sums donated amount for each Patient separetely and changes donor level once it reaches a certain value.
+
+! [alt text] (https://github.com/AdamPietrzyk/SQL-Data-Analysis/blob/main/Blood%20Donation%20Project%20-%20DB%20creation%2C%20queries%2C%20analysis/Sreenshots/Table%20relations%20-%20Reverse%20Engineer.png)
