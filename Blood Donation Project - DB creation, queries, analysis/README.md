@@ -35,6 +35,15 @@ Moreover the code that I prepared contains some TRIGGERS, so some ations are tak
 _________________________________________________________________________
 ### Q: How does it look like as a dashboard?
 #### A: In order to make it a dashboard, I used PowerBI Desktop.
-I loaded data as a mySQL source, cleaned it and then created a simple dashboard. Here you can see two screenshots:
+I loaded data as a mySQL source, cleaned it and then created a simple dashboard.
 
+Here you can see two screenshots. The first screenshot takes into account all the data.
+
+<img width="1393" alt="dashboard1" src="https://user-images.githubusercontent.com/127242593/223771861-f84e0a07-69d7-4238-a3a3-01fb0e2e238e.png">
+
+The second screenshot takes into account filtered data. Filters that are active:
+* Gender: M
+* BloodType: 0
+* RhFactor: +
+<img width="1393" alt="dashboard2" src="https://user-images.githubusercontent.com/127242593/223771990-3bd2b54b-f7a9-44e7-bddc-8f592497ffc7.png">
 
