@@ -1,6 +1,5 @@
 ######## DATABASE AND TABLES CREATION SECTION
 
-DROP DATABASE Krwiodawstwo;
 CREATE DATABASE IF NOT EXISTS Krwiodawstwo;
 
 USE Krwiodawstwo;
@@ -8,13 +7,13 @@ USE Krwiodawstwo;
 CREATE TABLE BloodType (
 	ID_BloodType INT AUTO_INCREMENT NOT NULL,
 	BloodType ENUM('0', 'A', 'B', 'AB'),
-    PRIMARY KEY(ID_BloodType)
+    	PRIMARY KEY(ID_BloodType)
 );
 
 CREATE TABLE RhFactor (
 	ID_RhFactor INT AUTO_INCREMENT NOT NULL,
-    RhFactor ENUM('+', '-'),
-    PRIMARY KEY(ID_RhFactor)
+    	RhFactor ENUM('+', '-'),
+    	PRIMARY KEY(ID_RhFactor)
 );
 
 CREATE TABLE Inventory (
@@ -28,67 +27,67 @@ CREATE TABLE Inventory (
 
 CREATE TABLE Donator_Level (
 	ID_Donator_Level INT NOT NULL AUTO_INCREMENT,
-    Donator_Level ENUM(
-		'Brak',
-        'Meritorious Honorable Blood Donor 1 st',
-        'Meritorious Honorable Blood Donor 2 st',
-        'Meritorious Honorable Blood Donor 3 st'),
+    	Donator_Level ENUM(
+	'Brak',
+	'Meritorious Honorable Blood Donor 1 st',
+	'Meritorious Honorable Blood Donor 2 st',
+	'Meritorious Honorable Blood Donor 3 st'),
 	PRIMARY KEY (ID_Donator_Level)
     );
 
 CREATE TABLE Patients(
 	ID_Patient INT AUTO_INCREMENT NOT NULL,
-    first_name varchar(50),
-    last_name varchar(50),
-    gender ENUM('M', 'F'),
-    phone_number varchar(20),
-    email varchar(50),
+    	first_name varchar(50),
+   	last_name varchar(50),
+   	gender ENUM('M', 'F'),
+   	phone_number varchar(20),
+    	email varchar(50),
 	address_street varchar(50),
 	address_zipcode varchar(50),
 	address_city varchar(50),
-    ID_BloodType INT,
-    ID_RhFactor INT,
-    DonatedAmount INT,
-    ID_Donator_Level INT,
+    	ID_BloodType INT,
+   	ID_RhFactor INT,
+   	DonatedAmount INT,
+   	ID_Donator_Level INT,
 	PRIMARY KEY (ID_Patient),
-    FOREIGN KEY (ID_BloodType) REFERENCES BloodType(ID_BloodType),
+   	FOREIGN KEY (ID_BloodType) REFERENCES BloodType(ID_BloodType),
 	FOREIGN KEY (ID_RhFactor) REFERENCES RhFactor(ID_RhFactor),
-    FOREIGN KEY (ID_Donator_Level) REFERENCES Donator_Level(ID_Donator_Level)
+   	FOREIGN KEY (ID_Donator_Level) REFERENCES Donator_Level(ID_Donator_Level)
     );
         
 CREATE TABLE Staff (
 	ID_Staff INT NOT NULL AUTO_INCREMENT,
 	first_name varchar(50),
-    last_name varchar(50),
-    phone_number varchar(20),
-    email varchar(20),
-    phlebotomist ENUM('Doctor', 'Nurse', 'Paramedic'),
-    PRIMARY KEY (ID_Staff)
+    	last_name varchar(50),
+   	phone_number varchar(20),
+	email varchar(20),
+    	phlebotomist ENUM('Doctor', 'Nurse', 'Paramedic'),
+    	PRIMARY KEY (ID_Staff)
 );
 
 CREATE TABLE Institution (
 	ID_Institution INT NOT NULL AUTO_INCREMENT,
-    i_name varchar(50),
+    	i_name varchar(50),
 	phone_number varchar(20),
-    email varchar(50),
+    	email varchar(50),
 	address_street varchar(20),
 	address_zipcode varchar(20),
 	address_city varchar(20),
-    PRIMARY KEY (ID_Institution)
+    	PRIMARY KEY (ID_Institution)
 );
 
 CREATE TABLE Donations (
 	ID_Donation INT NOT NULL AUTO_INCREMENT,
-    Donation_Date DATETIME,
-    Next_Possible_Donation DATETIME,
-    DonationQuantity INT,
-    ID_Patient INT,
-    ID_Staff INT,
-    ID_Institution INT,
-    PRIMARY KEY (ID_Donation),
-    FOREIGN KEY (ID_Patient) REFERENCES Patients(ID_Patient),
-    FOREIGN KEY (ID_Staff) REFERENCES Staff(ID_Staff),
-    FOREIGN KEY (ID_Institution) REFERENCES Institution(ID_Institution)
+	Donation_Date DATETIME,
+	Next_Possible_Donation DATETIME,
+	DonationQuantity INT,
+	ID_Patient INT,
+	ID_Staff INT,
+	ID_Institution INT,
+	PRIMARY KEY (ID_Donation),
+	FOREIGN KEY (ID_Patient) REFERENCES Patients(ID_Patient),
+	FOREIGN KEY (ID_Staff) REFERENCES Staff(ID_Staff),
+	FOREIGN KEY (ID_Institution) REFERENCES Institution(ID_Institution)
 );
 
 
