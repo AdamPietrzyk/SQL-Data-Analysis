@@ -31,4 +31,10 @@ So, here are tables with relations between them:
 
 
 Moreover the code that I prepared contains some TRIGGERS, so some ations are taken automatically, such as changing Donator_Level. The trigger automatically sums donated amount for each Patient separetely and changes donor level once it reaches a certain value.
+<br> </br>
+_________________________________________________________________________
+### Q: How does it look like as a dashboard?
+#### A: In order to make it a dashboard, I used PowerBI Desktop.
+I loaded data as a mySQL source, cleaned it and then created a simple dashboard. Here you can see two screenshots:
+
 
